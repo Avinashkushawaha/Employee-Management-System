@@ -1,7 +1,7 @@
 import React, { createContext, useEffect, useState} from 'react'
 import { getLocalStorage } from '../utils/localStorage'
 
-export const AuthProvider = createContext()
+export const AuthContext = createContext()
 
 const AuthProvider = ({ childern }) => {
 
