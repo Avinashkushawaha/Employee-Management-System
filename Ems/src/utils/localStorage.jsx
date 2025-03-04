@@ -1,227 +1,205 @@
-const employees = {
-    "admin": {
-      "id": 1,
-      "email": "admin@example.com",
-      "password": "123"
-    },
-    "employees": [
-      {
+const employees = [
+    {
         "id": 1,
-        "email": "employee1@example.com",
+        "firstName": "Arjun",
+        "email": "e@e.com",
         "password": "123",
+        "taskCounts": {
+            "active": 2,
+            "newTask": 1,
+            "completed": 1,
+            "failed": 0
+        },
         "tasks": [
-          {
-            "taskTitle": "Design Login Page",
-            "taskDescription": "Create a responsive UI for the login page",
-            "taskDate": "2025-03-04",
-            "category": "Design",
-            "active": true,
-            "newTask": true,
-            "completed": false,
-            "failed": false
-          },
-          {
-            "taskTitle": "Fix Navbar Bug",
-            "taskDescription": "Resolve issue where navbar overlaps on small screens",
-            "taskDate": "2025-03-05",
-            "category": "Development",
-            "active": true,
-            "newTask": false,
-            "completed": false,
-            "failed": false
-          },
-          {
-            "taskTitle": "Optimize Images",
-            "taskDescription": "Reduce image sizes to improve page load speed",
-            "taskDate": "2025-03-06",
-            "category": "Performance",
-            "active": false,
-            "newTask": false,
-            "completed": true,
-            "failed": false
-          }
+            {
+                "active": true,
+                "newTask": true,
+                "completed": false,
+                "failed": false,
+                "taskTitle": "Update website",
+                "taskDescription": "Revamp the homepage design",
+                "taskDate": "2024-10-12",
+                "category": "Design" 
+            },
+            {
+                "active": false,
+                "newTask": false,
+                "completed": true,
+                "failed": false,
+                "taskTitle": "Client meeting",
+                "taskDescription": "Discuss project requirements",
+                "taskDate": "2024-10-10",
+                "category": "Meeting"
+            },
+            {
+                "active": true,
+                "newTask": false,
+                "completed": false,
+                "failed": false,
+                "taskTitle": "Fix bugs",
+                "taskDescription": "Resolve bugs reported in issue tracker",
+                "taskDate": "2024-10-14",
+                "category": "Development"
+            }
         ]
-      },
-      {
+    },
+    {
         "id": 2,
+        "firstName": "Sneha",
         "email": "employee2@example.com",
         "password": "123",
+        "taskCounts": {
+            "active": 1,
+            "newTask": 0,
+            "completed": 1,
+            "failed": 0
+        },
         "tasks": [
-          {
-            "taskTitle": "Write API Documentation",
-            "taskDescription": "Document the new authentication API endpoints",
-            "taskDate": "2025-03-04",
-            "category": "Documentation",
-            "active": false,
-            "newTask": true,
-            "completed": false,
-            "failed": false
-          },
-          {
-            "taskTitle": "Create Database Schema",
-            "taskDescription": "Design a relational schema for user management",
-            "taskDate": "2025-03-05",
-            "category": "Database",
-            "active": true,
-            "newTask": false,
-            "completed": false,
-            "failed": false
-          },
-          {
-            "taskTitle": "Code Review",
-            "taskDescription": "Review recent PRs from frontend team",
-            "taskDate": "2025-03-06",
-            "category": "Development",
-            "active": false,
-            "newTask": false,
-            "completed": true,
-            "failed": false
-          },
-          {
-            "taskTitle": "Fix Authentication Bug",
-            "taskDescription": "Resolve issue where users stay logged in after logout",
-            "taskDate": "2025-03-07",
-            "category": "Backend",
-            "active": true,
-            "newTask": false,
-            "completed": false,
-            "failed": true
-          }
+            {
+                "active": true,
+                "newTask": false,
+                "completed": false,
+                "failed": false,
+                "taskTitle": "Database optimization",
+                "taskDescription": "Optimize queries for better performance",
+                "taskDate": "2024-10-11",
+                "category": "Database"
+            },
+            {
+                "active": false,
+                "newTask": false,
+                "completed": true,
+                "failed": false,
+                "taskTitle": "Design new feature",
+                "taskDescription": "Create mockups for the new feature",
+                "taskDate": "2024-10-09",
+                "category": "Design"
+            }
         ]
-      },
-      {
+    },
+    {
         "id": 3,
+        "firstName": "Ravi",
         "email": "employee3@example.com",
         "password": "123",
+        "taskCounts": {
+            "active": 2,
+            "newTask": 1,
+            "completed": 1,
+            "failed": 0
+        },
         "tasks": [
-          {
-            "taskTitle": "Create Landing Page",
-            "taskDescription": "Design and develop a modern landing page",
-            "taskDate": "2025-03-04",
-            "category": "Design",
-            "active": true,
-            "newTask": false,
-            "completed": false,
-            "failed": false
-          },
-          {
-            "taskTitle": "Write Unit Tests",
-            "taskDescription": "Implement Jest tests for key components",
-            "taskDate": "2025-03-05",
-            "category": "Testing",
-            "active": false,
-            "newTask": false,
-            "completed": true,
-            "failed": false
-          },
-          {
-            "taskTitle": "Fix Responsive Issues",
-            "taskDescription": "Adjust CSS for better mobile support",
-            "taskDate": "2025-03-06",
-            "category": "Development",
-            "active": true,
-            "newTask": false,
-            "completed": false,
-            "failed": false
-          }
+            {
+                "active": true,
+                "newTask": true,
+                "completed": false,
+                "failed": false,
+                "taskTitle": "Prepare presentation",
+                "taskDescription": "Prepare slides for upcoming client presentation",
+                "taskDate": "2024-10-13",
+                "category": "Presentation"
+            },
+            {
+                "active": true,
+                "newTask": false,
+                "completed": false,
+                "failed": false,
+                "taskTitle": "Code review",
+                "taskDescription": "Review the codebase for optimization",
+                "taskDate": "2024-10-12",
+                "category": "Development"
+            },
+            {
+                "active": false,
+                "newTask": false,
+                "completed": true,
+                "failed": false,
+                "taskTitle": "Testing",
+                "taskDescription": "Test the latest build for bugs",
+                "taskDate": "2024-10-08",
+                "category": "QA"
+            }
         ]
-      },
-      {
+    },
+    {
         "id": 4,
+        "firstName": "Priya",
         "email": "employee4@example.com",
         "password": "123",
+        "taskCounts": {
+            "active": 2,
+            "newTask": 1,
+            "completed": 0,
+            "failed": 0
+        },
         "tasks": [
-          {
-            "taskTitle": "Implement Dark Mode",
-            "taskDescription": "Add a toggle switch for dark mode",
-            "taskDate": "2025-03-04",
-            "category": "UI/UX",
-            "active": false,
-            "newTask": false,
-            "completed": true,
-            "failed": false
-          },
-          {
-            "taskTitle": "Optimize SQL Queries",
-            "taskDescription": "Improve database performance by indexing",
-            "taskDate": "2025-03-05",
-            "category": "Database",
-            "active": true,
-            "newTask": true,
-            "completed": false,
-            "failed": false
-          },
-          {
-            "taskTitle": "Build Notification System",
-            "taskDescription": "Implement a real-time notification system",
-            "taskDate": "2025-03-06",
-            "category": "Backend",
-            "active": true,
-            "newTask": false,
-            "completed": false,
-            "failed": false
-          },
-          {
-            "taskTitle": "Fix Broken Links",
-            "taskDescription": "Check and update all broken links",
-            "taskDate": "2025-03-07",
-            "category": "SEO",
-            "active": false,
-            "newTask": false,
-            "completed": true,
-            "failed": false
-          }
+            {
+                "active": true,
+                "newTask": true,
+                "completed": false,
+                "failed": false,
+                "taskTitle": "Write documentation",
+                "taskDescription": "Update the project documentation",
+                "taskDate": "2024-10-13",
+                "category": "Documentation"
+            },
+            {
+                "active": true,
+                "newTask": false,
+                "completed": false,
+                "failed": false,
+                "taskTitle": "Set up CI/CD",
+                "taskDescription": "Implement continuous integration pipeline",
+                "taskDate": "2024-10-11",
+                "category": "DevOps"
+            }
         ]
-      },
-      {
+    },
+    {
         "id": 5,
+        "firstName": "Karan",
         "email": "employee5@example.com",
         "password": "123",
+        "taskCounts": {
+            "active": 2,
+            "newTask": 1,
+            "completed": 1,
+            "failed": 0
+        },
         "tasks": [
-          {
-            "taskTitle": "Create Onboarding Guide",
-            "taskDescription": "Write an onboarding document for new employees",
-            "taskDate": "2025-03-04",
-            "category": "HR",
-            "active": false,
-            "newTask": false,
-            "completed": true,
-            "failed": false
-          },
-          {
-            "taskTitle": "Update Security Policy",
-            "taskDescription": "Revise security guidelines based on new compliance",
-            "taskDate": "2025-03-05",
-            "category": "Security",
-            "active": true,
-            "newTask": true,
-            "completed": false,
-            "failed": false
-          },
-          {
-            "taskTitle": "Fix CORS Issue",
-            "taskDescription": "Resolve cross-origin requests not working",
-            "taskDate": "2025-03-06",
-            "category": "Backend",
-            "active": true,
-            "newTask": false,
-            "completed": false,
-            "failed": false
-          },
-          {
-            "taskTitle": "Improve API Performance",
-            "taskDescription": "Optimize response times for key API endpoints",
-            "taskDate": "2025-03-07",
-            "category": "Performance",
-            "active": false,
-            "newTask": false,
-            "completed": false,
-            "failed": true
-          }
+            {
+                "active": true,
+                "newTask": true,
+                "completed": false,
+                "failed": false,
+                "taskTitle": "UI redesign",
+                "taskDescription": "Redesign the user interface for better UX",
+                "taskDate": "2024-10-14",
+                "category": "Design"
+            },
+            {
+                "active": false,
+                "newTask": false,
+                "completed": true,
+                "failed": false,
+                "taskTitle": "Deploy new build",
+                "taskDescription": "Deploy the latest build to production",
+                "taskDate": "2024-10-09",
+                "category": "DevOps"
+            },
+            {
+                "active": true,
+                "newTask": false,
+                "completed": false,
+                "failed": false,
+                "taskTitle": "Client feedback",
+                "taskDescription": "Gather feedback from clients after product launch",
+                "taskDate": "2024-10-12",
+                "category": "Support"
+            }
         ]
-      }
-    ]
-  }
+    }
+];
   
 
  const admin =  {
@@ -237,5 +215,7 @@ export const setLocalStorage = () =>{
 }        
   
 export const getLocalStorage = () =>{
-
+  const employees = JSON.parse(localStorage.getItem('employees'))
+  const admin = JSON.parse(localStorage.getItem('admin'))
+  console.log(JSON.parse(employees, admin))
 }
