@@ -48,7 +48,7 @@ npm run dev
 ---
 
 ## 🌐 Deployment
-🚀 **Live Demo:** [Click Here](https://your-deployment-link.com)  
+🚀 **Live Demo:** [https://melodic-paprenjak-9d002b.netlify.app/)  
 
 ---
 
