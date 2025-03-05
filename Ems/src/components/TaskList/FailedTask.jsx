@@ -1,6 +1,6 @@
 import React from 'react'
 
-const FailedTask = () => {
+const FailedTask = ({data = {} }) => {
   return (
     <div className=' flex-shrink-0 h-full w-[300px] p-5 bg-red-400 rounded-xl'>
     <div className='flex justify-between items-center'>
@@ -12,7 +12,7 @@ const FailedTask = () => {
      {data.taskDescription}
      </p>
      <div className='mt-2'>
-      <button className='w-full bg-red-500 rounded font-medium py-1 px-2 text-xs'>Failed</button>
+      <button className='w-full bg-red-500 hover:bg-red-600 rounded font-medium py-1 px-2 text-xs'>Failed</button>
      </div>
      </div>
   )

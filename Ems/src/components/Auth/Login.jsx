@@ -3,14 +3,14 @@ import React, { useState } from 'react'
 const Login = ({handleLogin}) => {
 
     const [email, setEmail] = useState('')
-    const [password, setpassword] = useState('')
+    const [password, setPassword] = useState('')
 
      const submitHandler = (e) =>{
         e.preventDefault()
        handleLogin(email, password )
 
         setEmail("")
-        setpassword("")
+        setPassword("")
      }
 
 
@@ -31,7 +31,7 @@ const Login = ({handleLogin}) => {
              <input
              value={password}
              onChange={(e) =>{
-                setpassword(e.target.value)
+                setPassword(e.target.value)
              }}
               required className='text-black outline-none bg-transparent border-2 border-emerald-600 py-4 px-5 mt-2 rounded-full placeholder: text-black' type="password" placeholder='Enter your password'
                />
