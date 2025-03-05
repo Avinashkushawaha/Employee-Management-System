@@ -87,3 +87,16 @@ Contributions are welcome! Feel free to **open an issue** or **submit a pull req
 ---
 
 🔗 **GitHub Repository:** [GitHub Repo](https://github.com/your-username/employee-management-system)  
+
+
+## api Email And Id
+admin@me.com <br>
+e@e.com <br>
+employee2@example.com <br>
+employee3@example.com <br>
+employee5@example.com <br>
+admin@example.com <br>
+## Password
+123
+## Admin Email
+admin@me.com
