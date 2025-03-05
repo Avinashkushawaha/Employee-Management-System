@@ -16,7 +16,7 @@ const NewTask = ({data = {}, onAccept }) => {
      </p>
      <div className='mt-6'>
         <button onClick={() => onAccept && onAccept(data)}
-         className='bg-blue-500 rounded font-medium py-1 text-xs'>Accept Task</button>
+         className='bg-blue-500 rounded font-medium py-1 px-2 text-xs'>Accept Task</button>
      </div>
         </div>
   )
